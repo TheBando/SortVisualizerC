@@ -13,8 +13,11 @@ void exit_visuals();
 void swap(int *, int *);
 int partition(int *, int, int);
 void quick_sort_with_ptr(int *, int, int);
-void quick_sort(int [], int, int);
 
+/*Radix Sort stuff*/
+int get_max(int * array, int size);
+void counting_sort(int * array, int size, int place);
+void radix_sort(int * array, int size);
 
 
 #endif
