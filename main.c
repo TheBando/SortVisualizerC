@@ -12,7 +12,7 @@ int main()
     srand((unsigned) time(&t));
     init_visuals();   
     /* 10 piece array + print the unsorted array */
-    int * array = malloc(sizeof *array * 10);
+    int * array = malloc(sizeof *array * 50);
     for (int i = 0; i < 10; i ++)
     {
         *(array + i) = (rand() % 21);
@@ -20,7 +20,7 @@ int main()
     }
 
     printf("\n");
-
+    
     if (pass_info(array, 10) == -1)
     {
         fprintf(stderr, "An error occurred: %s\n", COLOR_ERRO "BAD ARRAY" COLOR_NORM);
@@ -28,8 +28,8 @@ int main()
     }
 
     /* sort */    
-    quick_sort_with_ptr(array, 0, 9);
-
+    //quick_sort_with_ptr(array, 0, 9);
+    radix_sort(array, 10);
 
     /* print sorted array */
     for (int i = 0; i < 10; i ++)
