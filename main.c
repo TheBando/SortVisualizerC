@@ -12,7 +12,7 @@ int main()
     srand((unsigned) time(&t));
     init_visuals();   
     /* 10 piece array + print the unsorted array */
-    int * array = malloc(sizeof *array * 50);
+    int * array = malloc(sizeof *array * 10);
     for (int i = 0; i < 10; i ++)
     {
         *(array + i) = (rand() % 21);
